@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Farmer AI Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Farmer AI Assistant</h1>
+    <p>Ask questions, upload a crop image, or speak. The assistant will reply in plain language.</p>
+  </header>
+
+  <main>
+    <div class="controls">
+      <select id="langSelect" aria-label="Language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+      </select>
+
+      <button id="voiceBtn" type="button">Speak</button>
+      <label for="imageUpload" class="upload-label">Upload crop image</label>
+      <input id="imageUpload" type="file" accept="image/*" />
+    </div>
+
+    <textarea id="question" placeholder="Type your farming question here..."></textarea>
+    <div class="actions">
+      <button id="askBtn" type="button">Ask</button>
+      <label><input id="autoRead" type="checkbox" /> Auto read replies</label>
+    </div>
+
+    <div id="preview" aria-live="polite"></div>
+    <div id="answer" role="status" aria-live="polite"></div>
+  </main>
+
+  <footer>
+    <small>Prototype — do not enter secrets in the UI.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
